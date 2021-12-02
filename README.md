@@ -22,3 +22,30 @@ EX) A, B, C, D 4개의 테이블을 조인하고자 할 경우 옵티마이저�
 ```
 ## JOIN IMAGE
 ![제목없음](https://user-images.githubusercontent.com/83123393/144450307-ea6e134f-b96a-4f06-afc0-dcf73db5dc12.png)
+
+## EQUI JOIN
+```
+EQUI JOIN : EQUI(등가) JOIN은 두 개의 테이블 간에 컬럼 값들이 서로 정확하게 일치하는 경우에 사용되는 방법으로
+            대부분 PK <-> FK의 관계를 기반으로 한다.
+그러나 일반적으로 테이블 설계 시에 나타난 PK <-> FK의 관계를 이용하는 것이지 반드시
+PK <-> FK의 관계로만 EQUI JOIN이 성립하는 것은 아니다.
+이 기능은 계층형(Hierarchical)이나 망형(Network) 데이터베이스와 비교해서 관계형 데이터베이스의 큰 장점이다.
+JOIN의 조건은 WHERE절에 기술하게 되는데 "=" 연산자를 사용해서 표현한다.
+
+EX) 
+    SELECT 테이블1.칼럼명, 테이블2.칼럼명, ... 
+    FROM 테이블1, 테이블2
+    WHERE 테이블1.칼럼명1 = 테이블2.칼럼명2;
+           
+    → WHERE 절에 JOIN 조건을 넣는다.
+
+같은 내용을 ANSI/ISO SQL 표준 방식으로 표현하면 아래와 같다. ON 절에 대해서는 추가로 자세히 다룰예정.
+EX)
+    SELECT 테이블1.칼럼명, 테이블2.칼럼명, ... 
+    FROM 테이블1 INNER JOIN 테이블2 
+    ON 테이블1.칼럼명1 = 테이블2.칼럼명2;
+    
+    → ON 절에 JOIN 조건을 넣는다.
+```
+
+## EQUI JOIN IMAGE
