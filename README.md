@@ -49,3 +49,4 @@ EX)
 ```
 
 ## EQUI JOIN IMAGE
+![제목 없음](https://user-images.githubusercontent.com/83123393/144452753-ca93f59e-1f94-48b3-92f5-7cb5eb7bf2f2.png)
